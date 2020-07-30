@@ -25,3 +25,49 @@ In the project directory, you can run:
 ```sh
 $ yarn add styled-components
 ```
+
+# Install React Router Dom
+```sh
+$ yarn add react-router-dom
+```
+# Configuration React-Router-Dom
+```js
+import { BrowserRouter }  from 'react-router-dom';
+
+ReactDOM.render(
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>,
+  document.getElementById("root")
+);
+```
+
+# React Fragment ou <>
+```js
+function PageDefault({ children }) {
+  return (
+    <React.Fragment>
+      <Menu />
+        <Main>
+        { children }
+        </Main>
+      <Footer />
+    </React.Fragment>
+  )
+}
+```
+
+ou, somente com o <>
+```js
+function PageDefault({ children }) {
+  return (
+    <>
+      <Menu />
+        <Main>
+        { children }
+        </Main>
+      <Footer />
+    </>
+  )
+}
+```
